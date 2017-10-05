@@ -5,11 +5,9 @@ int main(){
 	char c[21];
 	for(int k=0;k<21;k++)c[k]=NULL;
 	for(j=i=0;i<10;i++,j++){
-		scanf("%c%*c",&c[j]);
-	if(c[j+1]!=NULL)j++;
-	for()
+		scanf("%s%*c",&c[j]);
+		if(c[j+1]!=NULL)j++;
+		printf("%s\n",c);
 	}
-	c[j]='\0';
-
 	return 0;
 }
