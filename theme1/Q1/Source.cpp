@@ -2,8 +2,7 @@
 
 int main(){
 	int j,i=0;
-	char c[21];
-	for(int k=0;k<21;k++)c[k]=NULL;
+	char c[21]={NULL};
 	for(j=i=0;i<10;i++,j++){
 		scanf("%s%*c",&c[j]);
 		if(c[j+1]!=NULL)j++;
