@@ -1,0 +1,163 @@
+#include <stdio.h>
+
+int main(){
+	int j,i=0;
+	char c[21]={NULL};
+	for(j=i=0;i<10;i++,j++){
+		scanf("%s%*c",&c[j]);
+		if(c[j+1]!=NULL)j++;
+		printf("%s\n",c);
+	}
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main(){
+	int a[5];
+	int *p;
+	a[0]=10;a[1]=20;a[2]=30;a[3]=40;a[4]=50;
+	p=a;
+	printf("%d,%d,%d,%d,%d\n",*p,*(p+1),*(p+2),*(p+3),*(p+4));
+	printf("%d,%d,%d,%d,%d\n",*p,*p+1,*p+2,*p+3,*p+4);
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main(){
+    char str[50]={};
+    char *point;
+    int i;
+
+    scanf("%s",str);
+    scanf("%d",&i);
+
+    str[i+4]='\0';
+    point=&str[i-1];
+
+    printf("%s\n",point);
+
+    return 0;
+}
+
+
+
+
+
+#include <stdio.h>
+
+typedef struct{
+    double add,sub,multi,div,avg;
+}Anser;
+
+Anser calc(double x,double y){
+    Anser ans;
+    ans.add=x+y;
+    ans.sub=x-y;
+    ans.multi=x*y;
+    ans.div=(y!=0)?x/y:NULL;
+    ans.avg=(x+y)/2;
+    return ans;
+}
+
+int main(){
+    Anser ans;
+    double x,y;
+    scanf("%lf %lf",&x,&y);
+    ans=calc(x,y);
+    printf("add:%lf\n",ans.add);
+    printf("sub:%lf\n",ans.sub);
+    printf("multi:%lf\n",ans.multi);
+    printf("div:%lf\n",ans.div);
+    printf("avg:%lf\n",ans.avg);
+    return 0;
+}
+
+
+
+#include <stdio.h>
+
+void swap(void*,void*,int);
+
+int main(){
+    double x=100,y=-5634;
+    int i1=200,i2=543;
+	printf("x=%lf y=%lf\n",x,y);
+
+    swap(&x,&y,sizeof(double));
+
+    printf("x=%lf y=%lf\n",x,y);
+
+
+    printf("i1=%d i2=%d\n",i1,i2);
+
+    swap(&i1,&i2,sizeof(int));
+
+    printf("i1=%d i2=%d\n",i1,i2);
+    return 0;
+}
+
+void swap(void* inputx,void* inputy,int size){
+    char* x=(char*)inputx;
+    char* y=(char*)inputy;
+    char temp;
+    for(int i=0;i<size;i++){
+        temp=x[i];
+        x[i]=y[i];
+        y[i]=temp;
+    }
+}
+#include <stdio.h>
+
+void swap(void*,void*,int);
+
+int main(){
+    int x[]={1,2,3,4,5,6,7,8,9};
+    int y[]={9,8,7,6,5,4,3,2,1};
+
+    for(int i=0;i<9;i++)printf("x[%d]=%d,y[%d]=%d\n",i,x[i],i,y[i]);
+
+    swap(&x,&y,sizeof(x));
+    puts("swap");
+
+    for(int i=0;i<9;i++)printf("x[%d]=%d,y[%d]=%d\n",i,x[i],i,y[i]);
+}
+
+void swap(void* inputx,void* inputy,int size){
+    char* x=(char*)inputx;
+    char* y=(char*)inputy;
+    char temp;
+    for(int i=0;i<size;i++){
+        temp=x[i];
+        x[i]=y[i];
+        y[i]=temp;
+    }
+}
+
+
+
+
+
+#include <stdio.h>
+
+int main(int argv,char* argc[]){
+	for(int i=0;i<argv;i++)printf("%s\n",argc[i]);
+		return 0;
+}

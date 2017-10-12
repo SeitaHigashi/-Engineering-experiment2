@@ -4,14 +4,20 @@ void swap(void*,void*,int);
 
 int main(){
     double x=100,y=-5634;
+    int i1=200,i2=543;
+	printf("x=%lf y=%lf\n",x,y);
 
-    printf("%lf %lf\n",x,y);
-
-    printf("%lu %lu\n",sizeof(int),sizeof(char));
     swap(&x,&y,sizeof(double));
 
-    printf("%lf %lf\n",x,y);
+    printf("x=%lf y=%lf\n",x,y);
 
+
+    printf("i1=%d i2=%d\n",i1,i2);
+
+    swap(&i1,&i2,sizeof(int));
+
+    printf("i1=%d i2=%d\n",i1,i2);
+    return 0;
 }
 
 void swap(void* inputx,void* inputy,int size){

@@ -9,7 +9,7 @@ Anser calc(double x,double y){
     ans.add=x+y;
     ans.sub=x-y;
     ans.multi=x*y;
-    ans.div=x/y;
+    ans.div=(y!=0)?x/y:NULL;
     ans.avg=(x+y)/2;
     return ans;
 }
