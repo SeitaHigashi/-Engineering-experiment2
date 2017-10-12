@@ -17,6 +17,7 @@
     <ProjectGuid>{6FA48522-6C36-4AB1-B950-55E2F12252B4}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>Q3</RootNamespace>
+    <ProjectName>Theme1-3</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
