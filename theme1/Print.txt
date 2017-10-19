@@ -67,21 +67,19 @@ typedef struct{
     double add,sub,multi,div,avg;
 }Anser;
 
-Anser calc(double x,double y){
-    Anser ans;
-    ans.add=x+y;
-    ans.sub=x-y;
-    ans.multi=x*y;
-    ans.div=(y!=0)?x/y:NULL;
-    ans.avg=(x+y)/2;
-    return ans;
+void calc(double x,double y,Anser* ans){
+    ans->add=x+y;
+    ans->sub=x-y;
+    ans->multi=x*y;
+    ans->div=(y!=0)?x/y:NULL;
+    ans->avg=(x+y)/2;
 }
 
 int main(){
     Anser ans;
     double x,y;
     scanf("%lf %lf",&x,&y);
-    ans=calc(x,y);
+    calc(x,y,&ans);
     printf("add:%lf\n",ans.add);
     printf("sub:%lf\n",ans.sub);
     printf("multi:%lf\n",ans.multi);
@@ -89,6 +87,8 @@ int main(){
     printf("avg:%lf\n",ans.avg);
     return 0;
 }
+
+
 
 
 
