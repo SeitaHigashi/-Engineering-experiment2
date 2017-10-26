@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Theme2-4", "Theme2-4\Theme2
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Theme2-5", "Theme2-5\Theme2-5.vcxproj", "{6CF97C9A-68C8-49DE-BD8B-A38013174F9A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Theme2-5Another", "Theme2-5Another\Theme2-5Another.vcxproj", "{0D2E3E6A-4C34-4278-A6CF-7EAF1E8E2361}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -37,8 +39,15 @@ Global
 		{6CF97C9A-68C8-49DE-BD8B-A38013174F9A}.Debug|Win32.Build.0 = Debug|Win32
 		{6CF97C9A-68C8-49DE-BD8B-A38013174F9A}.Release|Win32.ActiveCfg = Release|Win32
 		{6CF97C9A-68C8-49DE-BD8B-A38013174F9A}.Release|Win32.Build.0 = Release|Win32
+		{0D2E3E6A-4C34-4278-A6CF-7EAF1E8E2361}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0D2E3E6A-4C34-4278-A6CF-7EAF1E8E2361}.Debug|Win32.Build.0 = Debug|Win32
+		{0D2E3E6A-4C34-4278-A6CF-7EAF1E8E2361}.Release|Win32.ActiveCfg = Release|Win32
+		{0D2E3E6A-4C34-4278-A6CF-7EAF1E8E2361}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
 	EndGlobalSection
 EndGlobal
