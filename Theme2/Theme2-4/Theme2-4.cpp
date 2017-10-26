@@ -7,7 +7,7 @@ int main(void){
     char* str;
     str=Combining("Hello ","World!");
     puts(str);
-    //free(str);
+    free(str);
     return 0;
 }
 
