@@ -9,8 +9,8 @@ void calc(double* num){
 }
 
 int main(){
-	double num[6]={8,4};
+	double num[6]={86436432,46436342};
 	calc(num);
-	for(int i=0;i<6;i++)printf("num[%d]=%d",i,num[i]);
+	for(int i=0;i<6;i++)printf("num[%d]=%lf",i,num[i]);
 	return 0;
 }
