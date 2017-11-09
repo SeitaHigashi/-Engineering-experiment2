@@ -11,7 +11,7 @@ typedef struct{
 
 output calc(input in){
     output out;
-    if(!in.y)exit(1);
+    if(in.y == 0)exit(1);
     out.sum = in.x + in.y;
     out.diff = in.x - in.y;
     out.pro = in.x * in.y;

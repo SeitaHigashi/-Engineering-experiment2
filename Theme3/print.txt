@@ -1,0 +1,264 @@
+#include <stdio.h>
+
+void print(char*,int,char,int);
+
+int main(int argc,char* argv[]){
+    char name_data[60];
+    int grade_data;
+    char class_data;
+    int number_data;
+    scanf("%s %d %c %d",name_data,&grade_data,&class_data,&number_data);
+    print(name_data,grade_data,class_data,number_data);
+    return 0;
+}
+void print(char* name_data,int grade_data,char class_data,int number_data){
+    printf("Name:%s\n",name_data);
+    printf("Grade:%d\n",grade_data);
+    printf("Class:%c\n",class_data);
+    printf("Number:%d\n",number_data);
+    return;
+}
+
+
+
+#include <stdio.h>
+
+#define NAME_SIZE 60
+
+typedef struct {
+    char name_data[NAME_SIZE];
+    int grade_data;
+    char class_data;
+    int number_data;
+} Human;
+
+Human input();
+void print(Human);
+
+int main(int argc,char* argv[]){
+    Human human = input();
+    print(human);
+    return 0;
+}
+Human input(){
+    Human human;
+    char name_data[NAME_SIZE];
+    int grade_data;
+    char class_data;
+    int number_data;
+    scanf("%s %d %c %d",name_data,&grade_data,&class_data,&number_data);
+    for(int i=0;i<NAME_SIZE;i++)human.name_data[i]=name_data[i];
+    human.grade_data=grade_data;
+    human.class_data=class_data;
+    human.number_data=number_data;
+    return human;
+}
+
+void print(Human human){
+    printf("Name:%s\n",human.name_data);
+    printf("Grade:%d\n",human.grade_data);
+    printf("Class:%c\n",human.class_data);
+    printf("Number:%d\n",human.number_data);
+    return;
+}
+#include <stdio.h>
+
+#define NAME_SIZE 60
+
+typedef struct {
+    char name_data[NAME_SIZE];
+    int grade_data;
+    char class_data;
+    int number_data;
+} Human;
+
+void input(Human*);
+void print(Human);
+
+int main(int argc,char* argv[]){
+    Human human;
+    input(&human);
+    print(human);
+    return 0;
+}
+
+void input(Human* human){
+    scanf("%s %d %c %d",human->name_data,&(human->grade_data),&(human->class_data),&(human->number_data));
+}
+
+void print(Human human){
+    printf("Name:%s\n",human.name_data);
+    printf("Grade:%d\n",human.grade_data);
+    printf("Class:%c\n",human.class_data);
+    printf("Number:%d\n",human.number_data);
+    return;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+#define NAME_SIZE 63
+
+typedef struct {
+    char name_data[NAME_SIZE];
+    int grade_data;
+    char class_data;
+    int number_data;
+} Human;
+
+void print(Human);
+
+int main(int argc,char* argv[]){
+    Human human; 
+
+    printf("human:%d\n",sizeof(human));
+    printf("human.name_data:%d\n",sizeof(human.name_data));
+    printf("human.grade_data:%d\n",sizeof(human.grade_data));
+    printf("human.class_data:%d\n",sizeof(human.class_data));
+    printf("human.number_data:%d\n",sizeof(human.number_data));
+   
+    printf("member_all:%d\n",sizeof(human.name_data)+sizeof(human.grade_data)+sizeof(human.class_data)+sizeof(human.number_data));
+
+    return 0;
+}
+
+
+void print(Human human){
+    printf("Name:%s\n",human.name_data);
+    printf("Grade:%d\n",human.grade_data);
+    printf("Class:%c\n",human.class_data);
+    printf("Number:%d\n",human.number_data);
+    return;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct{
+    double x,y;
+} input;
+
+typedef struct{
+    double sum,diff,pro,quo;
+} output;
+
+output calc(input in){
+    output out;
+    if(in.y == 0)exit(1);
+    out.sum = in.x + in.y;
+    out.diff = in.x - in.y;
+    out.pro = in.x * in.y;
+    out.quo = in.x / in.y;
+    return out;
+}
+
+int main(int argc,char* argv[]){
+    input in;
+    output out;
+    scanf("%lf %lf",&(in.x),&(in.y));
+    out = calc(in);
+    printf("sum:%lf\n",out.sum);
+    printf("diff:%lf\n",out.diff);
+    printf("pro:%lf\n",out.pro);
+    printf("quo:%lf\n",out.quo);
+    return 0;
+}
+
+
+
+
+#include <stdio.h>
+
+typedef struct {
+    int total;
+    int general;
+    int special;
+} credit_type;
+
+typedef struct {
+    int grade;
+    char classroom;
+    char name[15];
+    int number;
+    credit_type credit;
+} Human;
+
+int main(int argc,char* argv[]){
+	Human takumi = {3,'I',"TakumiFukumoto",39,{94,58,28}};
+    printf("grade:\t%d\n",takumi.grade);
+    printf("classroom:\t%c\n",takumi.classroom);
+    printf("name:\t%s\n",takumi.name);
+    printf("number\t%d\n",takumi.number);
+    printf("credit.total:\t%d\n",takumi.credit.total);
+    printf("credit.general:\t%d\n",takumi.credit.general);
+    printf("credit.special:\t%d\n",takumi.credit.special);
+    return 0;
+}
+#include <stdio.h>
+
+typedef union {
+    char ch;
+    int i;
+    double d;
+} test_union;
+
+int main(int argc,char* argv[]){
+    test_union uni;
+    scanf("%x",&(uni.i));
+    printf("double:%x\n",uni.d);
+    printf("int:%x\n",uni.i);
+    printf("char:%x\n",uni.ch);
+    return 0;
+}

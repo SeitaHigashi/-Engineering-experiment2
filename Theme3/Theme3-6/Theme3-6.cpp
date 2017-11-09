@@ -1,22 +1,21 @@
 #include <stdio.h>
 
 typedef struct {
-    int total = 94;
-    int general = 58;
-    int special = 28;
+    int total;
+    int general;
+    int special;
 } credit_type;
 
 typedef struct {
-    int grade = 3;
-    char classroom = 'I';
-    char name[15]= {'T','a','k','u','m','i','F','u','k','u','m','o','t','o','\0'};
-    //char *name = "TakumiFukumoto";
-    int number = 39;
+    int grade;
+    char classroom;
+    char name[15];
+    int number;
     credit_type credit;
 } Human;
 
 int main(int argc,char* argv[]){
-    Human takumi;
+	Human takumi = {3,'I',"TakumiFukumoto",39,{94,58,28}};
     printf("grade:\t%d\n",takumi.grade);
     printf("classroom:\t%c\n",takumi.classroom);
     printf("name:\t%s\n",takumi.name);

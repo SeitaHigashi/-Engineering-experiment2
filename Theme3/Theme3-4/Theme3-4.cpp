@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define NAME_SIZE 60
+#define NAME_SIZE 64
 
 typedef struct {
     char name_data[NAME_SIZE];
@@ -9,12 +9,10 @@ typedef struct {
     int number_data;
 } Human;
 
-Human input();
 void print(Human);
 
 int main(int argc,char* argv[]){
-    Human human = input();
-    print(human);
+    Human human; 
 
     printf("human:%d\n",sizeof(human));
     printf("human.name_data:%d\n",sizeof(human.name_data));
@@ -22,24 +20,11 @@ int main(int argc,char* argv[]){
     printf("human.class_data:%d\n",sizeof(human.class_data));
     printf("human.number_data:%d\n",sizeof(human.number_data));
    
-    printf("menber_all:%d\n",sizeof(human.name_data)+sizeof(human.grade_data)+sizeof(human.class_data)+sizeof(human.number_data));
+    printf("member_all:%d\n",sizeof(human.name_data)+sizeof(human.grade_data)+sizeof(human.class_data)+sizeof(human.number_data));
 
     return 0;
 }
 
-Human input(){
-    Human human;
-    char name_data[NAME_SIZE];
-    int grade_data;
-    char class_data;
-    int number_data;
-    scanf("%s %d %c %d",name_data,&grade_data,&class_data,&number_data);
-    for(int i=0;i<NAME_SIZE;i++)human.name_data[i]=name_data[i];
-    human.grade_data=grade_data;
-    human.class_data=class_data;
-    human.number_data=number_data;
-    return human;
-}
 
 void print(Human human){
     printf("Name:%s\n",human.name_data);
