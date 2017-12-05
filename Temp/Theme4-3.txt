@@ -1,0 +1,19 @@
+1:#include <stdio.h>
+2:#include <stdlib.h>
+3:
+4:#define SIZE 100
+5:
+6:int main(int argc,char* argv[]){
+7:    FILE *read_p,*write_p;
+8:    char str[SIZE];
+9:    int i;
+10:    if(!(read_p=fopen("Theme4-3.cpp","r")))exit(1);
+11:    if(!(write_p=fopen("Theme4-3.txt","w")))exit(1);
+12:    for(i=1;fgets(str,SIZE,read_p)!=NULL;i++){
+13:        fprintf(stdout,"%s",str);
+14:        fprintf(write_p,"%d:%s",i,str);
+15:    }
+16:    fclose(read_p);
+17:    fclose(write_p);
+18:    return 0;
+19:}
