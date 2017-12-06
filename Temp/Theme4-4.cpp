@@ -11,5 +11,6 @@ int main(int argc,char* argv[]){
         printf("%c",c);
         fread(&c,sizeof(char),(size_t)1,fp);
     }
+    fclose(fp);
     return 0;
 }
