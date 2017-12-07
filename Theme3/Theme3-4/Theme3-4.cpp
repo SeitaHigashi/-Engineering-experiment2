@@ -1,11 +1,11 @@
 #include <stdio.h>
 
-#define NAME_SIZE 64
+#define NAME_SIZE 69
 
 typedef struct {
     char name_data[NAME_SIZE];
-    int grade_data;
     char class_data;
+    int grade_data;
     int number_data;
 } Human;
 
