@@ -8,8 +8,8 @@ int main(int argc,char* argv[]){
     if(!(fp=fopen("print_text.txt","w"))) exit(1);
     fprintf(fp,"%d",data);
     fclose(fp);
-    if(!(fp=fopen("print_binary.bin","wb"))) exit(1);
-    fwrite(&data,sizeof(int),1,fp);
+    if(!(fp=fopen("print_binary.binaly","wb"))) exit(1);
+    fwrite(&data,sizeof(int),(size_t)1,fp);
     fclose(fp);
     return 0;
 }

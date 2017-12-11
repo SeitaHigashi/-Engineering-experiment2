@@ -17,7 +17,7 @@ int main(int argc,char* argv[]){
     scanf("%s%*c",writemode);
     }
     if(!(fp=fopen(filename,writemode)))exit(1);
-    puts("start writting");
+    puts("start writting(END(CTRL-Z))");
     while((c=fgetc(stdin)) != EOF){
         fprintf(fp,"%c",c);
     }

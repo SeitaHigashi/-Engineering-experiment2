@@ -13,6 +13,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Theme4-5", "Theme4-5\Theme4
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Theme4-6", "Theme4-6\Theme4-6.vcxproj", "{AE7C8748-CB44-49E3-93CF-8EC25DEAE923}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Theme4-3Ex", "Theme4-3Ex\Theme4-3Ex.vcxproj", "{C1657568-4F58-4BCE-B506-998FD538ED32}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Theme4-6Ex", "Theme4-6Ex\Theme4-6Ex.vcxproj", "{CDE80801-8872-4F71-830F-ED2AFCD7749E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -43,6 +47,14 @@ Global
 		{AE7C8748-CB44-49E3-93CF-8EC25DEAE923}.Debug|Win32.Build.0 = Debug|Win32
 		{AE7C8748-CB44-49E3-93CF-8EC25DEAE923}.Release|Win32.ActiveCfg = Release|Win32
 		{AE7C8748-CB44-49E3-93CF-8EC25DEAE923}.Release|Win32.Build.0 = Release|Win32
+		{C1657568-4F58-4BCE-B506-998FD538ED32}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C1657568-4F58-4BCE-B506-998FD538ED32}.Debug|Win32.Build.0 = Debug|Win32
+		{C1657568-4F58-4BCE-B506-998FD538ED32}.Release|Win32.ActiveCfg = Release|Win32
+		{C1657568-4F58-4BCE-B506-998FD538ED32}.Release|Win32.Build.0 = Release|Win32
+		{CDE80801-8872-4F71-830F-ED2AFCD7749E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CDE80801-8872-4F71-830F-ED2AFCD7749E}.Debug|Win32.Build.0 = Debug|Win32
+		{CDE80801-8872-4F71-830F-ED2AFCD7749E}.Release|Win32.ActiveCfg = Release|Win32
+		{CDE80801-8872-4F71-830F-ED2AFCD7749E}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

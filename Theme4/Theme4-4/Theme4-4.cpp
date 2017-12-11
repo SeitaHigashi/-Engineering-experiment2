@@ -12,5 +12,6 @@ int main(int argc,char* argv[]){
         fread(&c,sizeof(char),(size_t)1,fp);
     }
     fclose(fp);
+	getchar();
     return 0;
 }

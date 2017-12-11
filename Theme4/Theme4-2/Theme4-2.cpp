@@ -4,13 +4,16 @@
 int main(int argc,char* argv[]){
     FILE *read_p,*write_p;
     char c;
-    if(!(read_p=fopen("Theme4-2.cpp","rb")))exit(1);
+	int i;
+    if(!(read_p=fopen("Theme4-2.cpp","r")))exit(1);
     if(!(write_p=fopen("Theme4-2.txt","w")))exit(1);
-    while((c=fgetc(read_p)) != EOF){
+    for(i=0;(c=fgetc(read_p)) != EOF;i++){
         fprintf(stdout,"%c",c);
         fprintf(write_p,"%c",c);
     }
-    fclose(read_p);
+	fprintf(stdout,"\n%d\n",i);
+	fclose(read_p);
     fclose(write_p);
+	getchar();
     return 0;
 }

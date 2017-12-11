@@ -11,9 +11,10 @@ int main(int argc,char* argv[]){
     if(!(write_p=fopen("Theme4-3.txt","w")))exit(1);
     for(i=1;fgets(str,SIZE,read_p)!=NULL;i++){
         fprintf(stdout,"%s",str);
-        fprintf(write_p,"%d:%s",i,str);
+        fprintf(write_p,"%3d:%s",i,str);
     }
     fclose(read_p);
     fclose(write_p);
+	getchar();
     return 0;
 }

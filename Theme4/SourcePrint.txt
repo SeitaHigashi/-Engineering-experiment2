@@ -1,0 +1,150 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc,char* argv[]){
+    int data;
+    FILE* fp;
+    scanf("%d",&data);
+    if(!(fp=fopen("print_text.txt","w"))) exit(1);
+    fprintf(fp,"%d",data);
+    fclose(fp);
+    if(!(fp=fopen("print_binary.binaly","wb"))) exit(1);
+    fwrite(&data,sizeof(int),(size_t)1,fp);
+    fclose(fp);
+    return 0;
+}
+
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc,char* argv[]){
+    FILE *read_p,*write_p;
+    char c;
+	int i;
+    if(!(read_p=fopen("Theme4-2.cpp","r")))exit(1);
+    if(!(write_p=fopen("Theme4-2.txt","w")))exit(1);
+    for(i=0;(c=fgetc(read_p)) != EOF;i++){
+        fprintf(stdout,"%c",c);
+        fprintf(write_p,"%c",c);
+    }
+	fprintf(stdout,"\n%d\n",i);
+	fclose(read_p);
+    fclose(write_p);
+	getchar();
+    return 0;
+}
+
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#define SIZE 100
+
+int main(int argc,char* argv[]){
+    FILE *read_p,*write_p;
+    char str[SIZE];
+    int i;
+    if(!(read_p=fopen("Theme4-3.cpp","r")))exit(1);
+    if(!(write_p=fopen("Theme4-3.txt","w")))exit(1);
+    for(i=1;fgets(str,SIZE,read_p)!=NULL;i++){
+        fprintf(stdout,"%s",str);
+        fprintf(write_p,"%3d:%s",i,str);
+    }
+    fclose(read_p);
+    fclose(write_p);
+	getchar();
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc,char* argv[]){
+    FILE *fp;
+    char c;
+    int i;
+    if(!(fp=fopen("Theme4-4.cpp","rb")))exit(1);
+    fread(&c,sizeof(char),(size_t)1,fp);
+    while(feof(fp)==0){
+        printf("%c",c);
+        fread(&c,sizeof(char),(size_t)1,fp);
+    }
+    fclose(fp);
+	getchar();
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc,char* argv[]){
+    FILE *fp,*write_p;
+    char c;
+    int i=0;
+	if(!(fp=fopen("Picture/75cdc7843f030e4dc0f112d6d74dff47.jpg","rb"))){fprintf(stderr,"error");exit(1);}
+    if(!(write_p=fopen("Theme4-5.jpg","wb")))exit(1);
+    fread(&c,sizeof(char),(size_t)1,fp);
+    while(feof(fp)==0){
+        fprintf(write_p,"%c",c);
+        fread(&c,sizeof(char),(size_t)1,fp);
+        i++;
+    }
+    printf("%d\n",i);
+    fclose(fp);
+    fclose(write_p);
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#define SIZE 100
+
+int main(int argc,char* argv[]){
+    FILE *fp;
+    char c;
+    char filename[SIZE];
+    char writemode[SIZE];
+    printf("filename:");
+    scanf("%s",filename);
+    printf("writemode(w/a):");
+    scanf("%s%*c",writemode);
+    while(writemode[1]!= '\0' || ( writemode[0]!='w' && writemode[0]!='a')){
+    printf("retype writemode(w/a):");
+    scanf("%s%*c",writemode);
+    }
+    if(!(fp=fopen(filename,writemode)))exit(1);
+    puts("start writting(END(CTRL-Z))");
+    while((c=fgetc(stdin)) != EOF){
+        fprintf(fp,"%c",c);
+    }
+    fclose(fp);
+    return 0;
+}
