@@ -66,7 +66,7 @@ int main(int argc,char* argv[]){
 }
 
 char *strcharcat(char c,char* str){
-	char s[XSIZE]={NULL};
+	char s[XSIZE+1]={NULL};
 	int i;
 	s[0]=c;
 	strcat(s,str);
