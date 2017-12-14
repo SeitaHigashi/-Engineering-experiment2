@@ -15,7 +15,7 @@
  14:        fprintf(write_p,"%3d:%s",i,str);
  15:		string+=strlen(str);
  16:	}
- 17:	fprintf(stdout,"%d\n",string);
+ 17:	fprintf(stdout,"\n%d\n",string);
  18:	fclose(read_p);
  19:	fclose(write_p);
  20:	getchar();

@@ -17,6 +17,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Theme4-3Ex", "Theme4-3Ex\Th
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Theme4-6Ex", "Theme4-6Ex\Theme4-6Ex.vcxproj", "{CDE80801-8872-4F71-830F-ED2AFCD7749E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Theme4-2Ex", "Theme4-2Ex\Theme4-2Ex.vcxproj", "{EDC963F6-08EE-41D0-AE71-CE2989404E60}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -55,6 +57,10 @@ Global
 		{CDE80801-8872-4F71-830F-ED2AFCD7749E}.Debug|Win32.Build.0 = Debug|Win32
 		{CDE80801-8872-4F71-830F-ED2AFCD7749E}.Release|Win32.ActiveCfg = Release|Win32
 		{CDE80801-8872-4F71-830F-ED2AFCD7749E}.Release|Win32.Build.0 = Release|Win32
+		{EDC963F6-08EE-41D0-AE71-CE2989404E60}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EDC963F6-08EE-41D0-AE71-CE2989404E60}.Debug|Win32.Build.0 = Debug|Win32
+		{EDC963F6-08EE-41D0-AE71-CE2989404E60}.Release|Win32.ActiveCfg = Release|Win32
+		{EDC963F6-08EE-41D0-AE71-CE2989404E60}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

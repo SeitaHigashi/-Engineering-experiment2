@@ -15,7 +15,7 @@ int main(int argc,char* argv[]){
         fprintf(write_p,"%3d:%s",i,str);
 		string+=strlen(str);
 	}
-	fprintf(stdout,"%d\n",string);
+	fprintf(stdout,"\n%d\n",string);
 	fclose(read_p);
 	fclose(write_p);
 	getchar();

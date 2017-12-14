@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="Picture\75cdc7843f030e4dc0f112d6d74dff47.jpg" />
+    <Image Include="Picture\Penguins.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
