@@ -9,6 +9,8 @@
 #define IDD_THEME51_DIALOG	102
 #define IDD_ABOUTBOX			103
 #define IDM_ABOUT				104
+#define IDM_OPEN	201
+#define IDM_CLOSE	202
 #define IDM_EXIT				105
 #define IDI_THEME51			107
 #define IDI_SMALL				108

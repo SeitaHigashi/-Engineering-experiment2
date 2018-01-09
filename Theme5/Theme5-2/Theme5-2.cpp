@@ -128,6 +128,8 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 	int wmId, wmEvent;
 	PAINTSTRUCT ps;
 	HDC hdc;
+	RECT rc;
+	char *szStr="ウィンドウ内への\n文字列表示";
 
 	switch (message)
 	{
@@ -150,6 +152,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 	case WM_PAINT:
 		hdc = BeginPaint(hWnd, &ps);
 		// TODO: 描画コードをここに追加してください...
+		TextOut(hdc,10,10,(LPCTSTR)szStr,(int)sizeof(szStr));
 		EndPaint(hWnd, &ps);
 		break;
 	case WM_DESTROY:

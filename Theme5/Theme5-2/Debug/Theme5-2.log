@@ -1,0 +1,16 @@
+﻿2017/12/21 13:29:52 にビルドを開始しました。
+     1>ノード 2 上のプロジェクト "\\fs01\private$\b15155\.WinProfiles\Document\Visual Studio 2012\Projects\Theme5\Theme5-2\Theme5-2.vcxproj" (Build ターゲット)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Theme5-2.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt "Theme5-2.cpp"
+         Theme5-2.cpp
+     1>\\fs01\private$\b15155\.winprofiles\document\visual studio 2012\projects\theme5\theme5-2\theme5-2.cpp(131): warning C4101: 'rc' : ローカル変数は 1 度も使われていません。
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"\\fs01\private$\b15155\.WinProfiles\Document\Visual Studio 2012\Projects\Theme5\Debug\Theme5-2.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"\\fs01\private$\b15155\.WinProfiles\Document\Visual Studio 2012\Projects\Theme5\Debug\Theme5-2.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"\\fs01\private$\b15155\.WinProfiles\Document\Visual Studio 2012\Projects\Theme5\Debug\Theme5-2.lib" /MACHINE:X86 "Debug\Theme5-2.res"
+         Debug\stdafx.obj
+         "Debug\Theme5-2.obj"
+         Theme5-2.vcxproj -> \\fs01\private$\b15155\.WinProfiles\Document\Visual Studio 2012\Projects\Theme5\Debug\Theme5-2.exe
+     1>プロジェクト "\\fs01\private$\b15155\.WinProfiles\Document\Visual Studio 2012\Projects\Theme5\Theme5-2\Theme5-2.vcxproj" (Build ターゲット) のビルドが完了しました。
+
+ビルドに成功しました。
+
+経過時間 00:00:01.57
