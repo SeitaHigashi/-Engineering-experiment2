@@ -25,7 +25,7 @@ int main(int argc,char* argv[]){
     scanf("%s%*c",filename);
     printf("writemode(w/a):");
     scanf("%s%*c",writemode);
-    while(writemode[1]!= '\0' || ( writemode[0]!='w' && writemode[0]!='a')){
+    while(!(writemode[1]== '\0' || writemode[1]=='b' || writemode[1]=='t') || ( writemode[0]!='w' && writemode[0]!='a')){
     printf("retype writemode(w/a):");
     scanf("%s%*c",writemode);
     }
@@ -40,12 +40,12 @@ int main(int argc,char* argv[]){
 	fclose(fp);
     if(!(fp=fopen(filename,"w")))exit(1);
 	//WriteStart
-    puts("start writting(END(CTRL-Z))");
+    puts("start writting(END(CTRL-Z))"); 
     for(i=0;(c=fgetc(stdin)) != EOF;i++){
-		if(c=='\n'){
-			for(j=i;j<YSIZE;j++)strcharcat(' ',readstring[j]);
-			i=-1;
-		}else strcharcat(c,readstring[i]);
+	  	if(c=='\n'){
+	    	for(j=i;j<YSIZE;j++)strcharcat(' ',readstring[j]);
+		    i=-1;
+    	}else strcharcat(c,readstring[i]);
     }
 	for(i=0;i<YSIZE;i++)fprintf(fp,"%s",readstring[i]);
 	//FileClose

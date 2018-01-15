@@ -12,15 +12,23 @@ int main(int argc,char* argv[]){
     scanf("%s",filename);
     printf("writemode(w/a):");
     scanf("%s%*c",writemode);
-    while(writemode[1]!= '\0' || ( writemode[0]!='w' && writemode[0]!='a')){
+    while(!(writemode[1]== '\0' || writemode[1]=='b' || writemode[1]=='t') || ( writemode[0]!='w' && writemode[0]!='a')){
     printf("retype writemode(w/a):");
     scanf("%s%*c",writemode);
     }
     if(!(fp=fopen(filename,writemode)))exit(1);
     puts("start writting(END(CTRL-Z))");
-    while((c=fgetc(stdin)) != EOF){
-        fprintf(fp,"%c",c);
-    }
+    if(writemode[1]=='b'){
+		fread(&c,sizeof(char),(size_t)1,stdin);
+        while(c != EOF){
+            fwrite(&c,sizeof(char),(size_t)1,fp);
+		    fread(&c,sizeof(char),(size_t)1,stdin);
+		}
+	}else{
+        while((c=fgetc(stdin)) != EOF){
+            fprintf(fp,"%c",c);
+        }
+	}
     fclose(fp);
     return 0;
 }

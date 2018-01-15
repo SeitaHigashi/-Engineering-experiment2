@@ -173,7 +173,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 //		SetTextColor(hdc,RGB(0,0,255));
 		DrawText(hdc,(LPCTSTR)szStr,(int)strlen(szStr),&rc,DT_WORDBREAK|DT_CENTER);
 //		DrawText(hdc,(LPCTSTR)szStr,(int)strlen(szStr),&rc,DT_CENTER);
-//		TextOut(hdc,10,10,(LPCTSTR)szStr,(int)sizeof(szStr));
+		TextOut(hdc,10,10,(LPCTSTR)szStr,(int)sizeof(szStr));
 		EndPaint(hWnd, &ps);
 		break;
 	case WM_DESTROY:
