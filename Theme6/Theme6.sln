@@ -9,11 +9,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Theme6-3", "Theme6-3\Theme6
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Theme6-4", "Theme6-4\Theme6-4.vcxproj", "{B4CC98C5-EA85-483E-9DC9-8C055FBC56B2}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Theme6-5", "Theme6-5\Theme6-5.vcxproj", "{CA047CAC-E61C-4503-9A42-3642B28E173D}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Theme1and2", "Theme1and2\Theme1and2.vcxproj", "{A27C1793-E858-4009-A299-A1546758FE41}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Theme3and4", "Theme3and4\Theme3and4.vcxproj", "{9A5BDBF8-0293-40D6-9F75-1293F2B6158F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Ex", "Ex\Ex.vcxproj", "{FF070F63-80C1-4202-9F5E-B387EF586B02}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,10 +37,6 @@ Global
 		{B4CC98C5-EA85-483E-9DC9-8C055FBC56B2}.Debug|Win32.Build.0 = Debug|Win32
 		{B4CC98C5-EA85-483E-9DC9-8C055FBC56B2}.Release|Win32.ActiveCfg = Release|Win32
 		{B4CC98C5-EA85-483E-9DC9-8C055FBC56B2}.Release|Win32.Build.0 = Release|Win32
-		{CA047CAC-E61C-4503-9A42-3642B28E173D}.Debug|Win32.ActiveCfg = Debug|Win32
-		{CA047CAC-E61C-4503-9A42-3642B28E173D}.Debug|Win32.Build.0 = Debug|Win32
-		{CA047CAC-E61C-4503-9A42-3642B28E173D}.Release|Win32.ActiveCfg = Release|Win32
-		{CA047CAC-E61C-4503-9A42-3642B28E173D}.Release|Win32.Build.0 = Release|Win32
 		{A27C1793-E858-4009-A299-A1546758FE41}.Debug|Win32.ActiveCfg = Debug|Win32
 		{A27C1793-E858-4009-A299-A1546758FE41}.Debug|Win32.Build.0 = Debug|Win32
 		{A27C1793-E858-4009-A299-A1546758FE41}.Release|Win32.ActiveCfg = Release|Win32
@@ -49,6 +45,10 @@ Global
 		{9A5BDBF8-0293-40D6-9F75-1293F2B6158F}.Debug|Win32.Build.0 = Debug|Win32
 		{9A5BDBF8-0293-40D6-9F75-1293F2B6158F}.Release|Win32.ActiveCfg = Release|Win32
 		{9A5BDBF8-0293-40D6-9F75-1293F2B6158F}.Release|Win32.Build.0 = Release|Win32
+		{FF070F63-80C1-4202-9F5E-B387EF586B02}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FF070F63-80C1-4202-9F5E-B387EF586B02}.Debug|Win32.Build.0 = Debug|Win32
+		{FF070F63-80C1-4202-9F5E-B387EF586B02}.Release|Win32.ActiveCfg = Release|Win32
+		{FF070F63-80C1-4202-9F5E-B387EF586B02}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
