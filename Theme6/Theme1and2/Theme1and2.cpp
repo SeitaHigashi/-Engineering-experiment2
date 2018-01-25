@@ -36,6 +36,10 @@ int main()
 		return -2;
 	}
 
+		memset(&addrin,0,sizeof(addrin));
+		addrin.sin_family=AF_INET;
+		addrin.sin_port=htons(port);
+
 	if(serverFlag==false){
 		lpHostEnt = gethostbyname(ServerIP);
 		if(lpHostEnt == NULL){
@@ -47,10 +51,7 @@ int main()
 			}
 		}
 
-		memset(&addrin,0,sizeof(addrin));
 		memcpy(&(addrin.sin_addr),lpHostEnt->h_addr_list[0],lpHostEnt->h_length);
-		addrin.sin_port=htons(port);
-		addrin.sin_family=AF_INET;
 
 		while(1){
 			printf("message -> ");
@@ -69,9 +70,6 @@ int main()
 		}
 	}else{
 
-		memset(&addrin,0,sizeof(addrin));
-		addrin.sin_port=htons(port);
-		addrin.sin_family=AF_INET;
 		addrin.sin_addr.s_addr=htonl(INADDR_ANY);
 
 		rtn_no=bind(sock,(LPSOCKADDR)&addrin,(int)sizeof(addrin));
